@@ -1,0 +1,12 @@
+# Carpetas de build
+build/
+*.o
+*.a
+*.out
+app
+
+# Archivos de VSCode
+.vscode/
+
+# Archivos temporales
+.DS_Store
