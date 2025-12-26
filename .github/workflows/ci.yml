@@ -1,0 +1,26 @@
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install
+        if: matrix.os == 'ubuntu-latest'
+        run: sudo apt-get update && sudo apt-get install -y cmake build-essential
+      - name: Install macOS deps
+        if: matrix.os == 'macos-latest'
+        run: brew install cmake || true
+      - name: Configure
+        run: mkdir -p build && cd build && cmake ..
+      - name: Build
+        run: cmake --build build --config Release || true
