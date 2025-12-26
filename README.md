@@ -2,6 +2,8 @@
 
 Proyecto de ejemplo sobre abstracción y modularidad en C++.
 
+Arquitectura modular en C++ con VS Code y CMake
+
 ## Compilación
 Con CMake:
 
@@ -13,3 +15,4 @@ cmake --build .
 
 ## Licencia
 MIT — ver `LICENSE`.
+
