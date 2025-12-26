@@ -10,3 +10,7 @@ app
 
 # Archivos temporales
 .DS_Store
+
+# Sensitive files
+token*.txt
+token*.key
