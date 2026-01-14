@@ -57,3 +57,4 @@ token*.key
 # debug information files
 *.dwo
 
+tokenPAT.txt.pub
